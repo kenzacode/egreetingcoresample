@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using halloween.Model;
 
 namespace halloween
 {
@@ -22,6 +24,9 @@ namespace halloween
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            //ADD DB AS A SERVICE
+            services.AddDbContext<bridgeDBContext>(options => options.UseSqlite(Configuration["bridgeDBContext"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,6 +50,21 @@ namespace halloween
                     name: "default",
                     template: "{controller}/{action=Index}/{id?}");
             });
+
+            //CREATE DB IF IT DOES NOT ALREADY EXIST
+            using (var serviceScope = app
+                .ApplicationServices
+                .GetRequiredService<IServiceScopeFactory>()
+                .CreateScope())
+
+                serviceScope
+                    .ServiceProvider
+                    .GetService<bridgeDBContext>()
+                    .Database
+                    .EnsureCreated();
+
+
+
         }
     }
 }

@@ -9,6 +9,10 @@ namespace halloween.Model
 {
     public class Greetings
     {
+        //NEED UNIQUE IDENIFIER 
+        [Key]
+        public int ID { get; set; }
+
         [DisplayName("Recipient Name")]
         [Display(Prompt = "e.g. ")]
         [Required(ErrorMessage = "Required")]

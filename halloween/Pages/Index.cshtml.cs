@@ -28,17 +28,17 @@ namespace halloween.Pages
             {
                 if (ModelState.IsValid)
                 {
-                    isPreviewPage = true;
 
-                    try
+
+                    //try
                     {
                         // ADD TO DATABASE
-                        //_context.__MODEL__.Add(__MODEL__);
-                        //_context.SaveChanges();
+                        _theDB.Greetings.Add(bridgeGreetings);
+                        _theDB.SaveChanges();
 
-                        return RedirectToPage("");
+                        return RedirectToPage("Preview", new {id = bridgeGreetings.ID});
                     }
-                    catch { }
+                    //catch { }
                 }
             }
             else
@@ -53,6 +53,13 @@ namespace halloween.Pages
         // BRIDGE TO GREETINGS MODEL
         [BindProperty]
         public Greetings bridgeGreetings { get; set; }
+
+        //CONNECT DATABSE TO MODEL
+        private bridgeDBContext _theDB;
+        public IndexModel (bridgeDBContext theDB)
+        {
+            _theDB = theDB;
+        }
            
         // TEST IF USER IS LOOKING AT PREVIEW OR FORM
         public bool isPreviewPage { get; set; }
