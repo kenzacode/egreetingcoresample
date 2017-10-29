@@ -1,0 +1,92 @@
+body {
+    font-family: arial;
+    font-size: 14px;
+    color:green;
+    background: #000 url("/images/forest.jpg") no-repeat center top;
+    background-size: cover;
+}
+
+a {
+    color: #333;
+}
+
+    a:link,
+    a:visited,
+    a:active,
+    a:hover a:focus {
+        color: #0026ff;
+    }
+
+
+.panel-header {
+    text-align: center;
+    padding: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/*.panel {
+    margin: 1em;
+    border: unset;
+    box-shadow: #000 0 2px 3px;
+}
+.panel-body {
+    background: rgba(0, 0, 0, 0.5);
+}*/
+
+.field-validation-valid {
+    color: #cc0000;
+    text-transform: uppercase;
+}
+
+
+
+.entry {
+    padding: 1em;
+}
+
+
+
+
+/*h1 {
+    font-family: 'Nosifer', cursive;
+    text-shadow: 2px 2px 15px #000;
+    color: #e91313;
+    text-align: center;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+#submitbutton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    #submitbutton:hover {
+        background-color: #45a049;
+    }
+
+#ecard7 {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+#ecard {
+    border: green;
+    border-width: 1px;
+    width: 400px;
+    margin: 10px auto 10px auto;
+}*/
