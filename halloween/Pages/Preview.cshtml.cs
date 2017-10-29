@@ -15,6 +15,9 @@ namespace halloween.Pages
 
         }
 
+        // BRIDGE TO GREETINGS MODEL
+        [BindProperty]
+        public Greetings bridgeGreetings { get; set; }
 
     }
 }
