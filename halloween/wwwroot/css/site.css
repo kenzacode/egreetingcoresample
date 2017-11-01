@@ -1,7 +1,7 @@
 body {
     font-family: arial;
     font-size: 14px;
-    color:green;
+    color:pink;
     background: #000 url("/images/forest.jpg") no-repeat center top;
     background-size: cover;
 }
@@ -18,36 +18,7 @@ a {
     }
 
 
-.panel-header {
-    text-align: center;
-    padding: 1em;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-/*.panel {
-    margin: 1em;
-    border: unset;
-    box-shadow: #000 0 2px 3px;
-}
-.panel-body {
-    background: rgba(0, 0, 0, 0.5);
-}*/
-
-.field-validation-valid {
-    color: #cc0000;
-    text-transform: uppercase;
-}
-
-
-
-.entry {
-    padding: 1em;
-}
-
-
-
-
-/*h1 {
+h1 {
     font-family: 'Nosifer', cursive;
     text-shadow: 2px 2px 15px #000;
     color: #e91313;
@@ -89,4 +60,32 @@ input[type=text], select, textarea {
     border-width: 1px;
     width: 400px;
     margin: 10px auto 10px auto;
+}
+
+.panel-header {
+    text-align: center;
+    padding: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/*.panel {
+    margin: 1em;
+    border: unset;
+    box-shadow: #000 0 2px 3px;
+}
+.panel-body {
+    background: rgba(0, 0, 0, 0.5);
 }*/
+
+.field-validation-valid {
+    color: #cc0000;
+    text-transform: uppercase;
+}
+
+
+
+.entry {
+    padding: 1em;
+}
+
+

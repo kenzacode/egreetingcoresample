@@ -33,6 +33,8 @@ namespace halloween.Pages
                     //try
                     {
                         // ADD TO DATABASE
+                        bridgeGreetings.createIP = "blah";
+                        bridgeGreetings.createDate = DateTime.Now.ToString();
                         _theDB.Greetings.Add(bridgeGreetings);
                         _theDB.SaveChanges();
 

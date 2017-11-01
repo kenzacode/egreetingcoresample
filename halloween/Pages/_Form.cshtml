@@ -18,7 +18,7 @@
                 <div class="form-group">
                     <label asp-for="bridgeGreetings.toEmail" class="col-2"></label>
                     <div class="col-10">
-                        <input type="email" name="bridgeGreetings.toEmail" class="form-control" maxlength="100" />
+                        <input type="email" asp-for="bridgeGreetings.toEmail" class="form-control" maxlength="100" />
                         <span asp-validation-for="bridgeGreetings.toEmail" class="text-danger"></span>
                         <div class="countdown"></div>
                     </div>
@@ -66,10 +66,10 @@
                         <div class="countdown"></div>
                     </div>
                 </div>
-                <div class="form-group">
+                @*<div class="form-group">
                     <label asp-for="bridgeGreetings.fromEmail" class="col-2"><input type="checkbox" asp-for="bridgeGreetings.agree" class="form-control" /></label>
                     <span asp-validation-for="bridgeGreetings.agree" class="text-danger"></span>
-                </div>
+                </div>*@
                 <div class="form-group">
                     <div class="g-recaptcha" data-sitekey="6Lc2SjYUAAAAAIroVb2qH0adzWVVXU49-d8KUezI"></div>
                     <span asp-validation-for="bridgeGreetings.reCaptcha" class="text-danger"></span>
