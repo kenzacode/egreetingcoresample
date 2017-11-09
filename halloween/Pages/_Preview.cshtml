@@ -1,68 +1,49 @@
-﻿@model PreviewModel
+﻿@model halloween.Model.Greetings
 
 
-<div class="panel">
-    <div class="panel-header">Please confirm the information below.</div>
-    <div class="panel-body">
-        <div class="to">
+
+    <div class="form-header">This is what they shall see...</div>
+    <div class="form-body">
+        @*<div class="has-error">bridgeGreetings.Message</div>"*@
             <div class="form-group">
-                <label asp-for="bridgeGreetings.toName" class="col-2"></label>
-                <div class="col-10">
-                    @Html.Raw(Model.bridgeGreetings.toName)
-                </div>
+                <label asp-for="@Model.toName"></label>
+                    @Html.Raw(Model.toName)             
             </div>
+
             <div class="form-group">
-                <label asp-for="bridgeGreetings.toEmail" class="col-2"></label>
-                <div class="col-10">
-                    @Html.Raw(Model.bridgeGreetings.toEmail)
-                </div>
-            </div>
-
-
-
-            <div class="custom">
-                <div class="form-group">
-                    <label class="col-2" asp-for="bridgeGreetings.subject"></label>
-                    <div class="col-10">
-                        @Html.Raw(Model.bridgeGreetings.subject)
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label asp-for="bridgeGreetings.mesg" class="col-2"></label>
-                    <div class="col-10">
-                        @Html.Raw(Model.bridgeGreetings.mesg)
-                    </div>
+                <label asp-for="@Model.toEmail"></label>
+                    @Html.Raw(Model.toEmail) 
+            </div>      
+       
+            <div class="form-group">
+                    <label asp-for="@Model.subject"></label>        
+                        @Html.Raw(Model.subject)           
                 </div>
 
-            </div>
-
-
-
-            <div class="from">
-                <div class="form-group">
-                    <label asp-for="bridgeGreetings.fromName" class="col-2"></label>
-                    <div class="col-10">
-                        @Html.Raw(Model.bridgeGreetings.fromName)
-                    </div>
+            <div class="form-group">
+                    <label asp-for="@Model.mesg" ></label>
+                        @Html.Raw(Model.mesg)
                 </div>
-                <div class="form-group">
-                    <label asp-for="bridgeGreetings.fromEmail" class="col-2">Email:</label>
-                    <div class="col-10">
-                        @Html.Raw(Model.bridgeGreetings.fromEmail)
-                    </div>
+          
+            <div class="form-group">
+                    <label asp-for="@Model.fromName" ></label>
+                        @Html.Raw(Model.fromName)
                 </div>
-            </div>
+
+            <div class="form-group">
+                    <label asp-for="@Model.fromEmail" >Email:</label>                
+                        @Html.Raw(Model.fromEmail)
+                </div>
+         
         </div>
 
-        <div class="button">
-            <input type="submit" value="Edit" class="btn btn-primary" />
-            <a href="/"></a>
-
-            <div class="button">
-                <input type="submit" value="Submit" class="btn btn-primary" />
-                <a href="/"></a>
-            </div>
-
-        </div>
+<form method="post">
+    <div class="button">
+        <input type="hidden" asp-for="@Model.ID" />
+        <input type="submit" value="Deliver" class="submitbutton" />
+         <a href="/"></a>
     </div>
-</div>
+</form> 
+
+
+

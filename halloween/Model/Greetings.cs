@@ -14,30 +14,39 @@ namespace halloween.Model
         public int ID { get; set; }
 
         [DisplayName("Recipient Name")]
-        [Display(Prompt = "e.g. ")]
+        [Display(Prompt = "e.g. Evelyn, mommy")]
         [Required(ErrorMessage = "Required")]
-        [StringLength(100, MinimumLength = 3, ErrorMessage = "You must enter between 3 to 100 characters")]
+        [StringLength(100, MinimumLength = 3, ErrorMessage = "Oppise, is that correct?")]
         public string toName { get; set; }
 
         [DisplayName("Your friend's email")]
-        [Display(Prompt = "username@domain.com")]
+        [Display(Prompt = "look@thering.com")]
         [Required(ErrorMessage = "Required")]
+        [StringLength(100, MinimumLength = 3, ErrorMessage = "Oppise, is that correct?")]
         public string toEmail { get; set; }
 
         [DisplayName("Subject")]
+        [Display(Prompt = "He watched the tape...")]
         [Required(ErrorMessage = "Required")]
+        [StringLength(100, MinimumLength = 3, ErrorMessage = "Oppise, is that correct?")]
         public string subject { get; set; }
 
         [DisplayName("Personalized Message")]
+        [Display(Prompt = "She will show you...4 days.")]
         [Required(ErrorMessage = "Required")]
+        [StringLength(100, MinimumLength = 3, ErrorMessage = "Oppise, is that correct?")]
         public string mesg { get; set; }
 
         [DisplayName("Sender's Name")]
+        [Display(Prompt = "e.g. Samara Morgan")]
         [Required(ErrorMessage = "Required")]
+        [StringLength(100, MinimumLength = 3, ErrorMessage = "Oppise, is that correct?")]
         public string fromName { get; set; }
 
-        [DisplayName("Sender's Email")]
+        [DisplayName("Sender's email")]
+        [Display(Prompt = "pleaselook@thering.com")]
         [Required(ErrorMessage = "Required")]
+        [StringLength(100, MinimumLength = 3, ErrorMessage = "Oppise, is that correct?")]
         public string fromEmail { get; set; }
 
 

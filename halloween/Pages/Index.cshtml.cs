@@ -35,9 +35,13 @@ namespace halloween.Pages
                         // ADD TO DATABASE
                         bridgeGreetings.createIP = "blah";
                         bridgeGreetings.createDate = DateTime.Now.ToString();
+                        bridgeGreetings.fromEmail = bridgeGreetings.fromEmail.ToLower();
+
+                        //ADD NEW RECORD TO THE DATABASE
                         _theDB.Greetings.Add(bridgeGreetings);
                         _theDB.SaveChanges();
 
+                        //SEND USER TO THE PREVIEW PAGE SHOWING THE NEW RECORD
                         return RedirectToPage("Preview", new {id = bridgeGreetings.ID});
                     }
                     //catch { }
