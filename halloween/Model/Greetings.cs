@@ -11,7 +11,7 @@ namespace halloween.Model
     {
         //NEED UNIQUE IDENIFIER FOR DATABASE
         [Key]
-        public int ID { get; set; }
+        public int? ID { get; set; }
 
         [DisplayName("Recipient Name")]
         [Display(Prompt = "e.g. Evelyn, mommy")]

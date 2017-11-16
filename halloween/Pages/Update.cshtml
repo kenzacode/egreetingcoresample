@@ -1,0 +1,30 @@
+﻿@*@model halloween.Model.Greetings
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="card col-sm-6 col-md-6 col-lg-6">
+            <img src="~/images/halloween.jpg" class="img-responsive" />
+        </div>
+        <div class="entry col-sm-6 col-md-6 col-lg-6">
+
+            @Html.Partial("_Form", Model.bridgeGreetings)
+
+        </div>
+    </div>
+</div>
+
+
+
+
+    <form method="post">
+        <div class="button">
+            <input type="hidden" asp-for="@Model.ID" />
+            <input type="submit" value="Update" class="submitbutton" />
+            <a href="/"></a>
+        </div>
+
+    </form>
+
+</div>*@
+
